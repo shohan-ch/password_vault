@@ -1,13 +1,18 @@
 import ReactDOM from "react-dom/client";
 import ArticleView from "../components/Article/ArticleView";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ArticleFind from "../components/Article/ArticleFind";
 
-const Article = () => {
+const ArticlePage = () => {
     return (
-        <>
-            <ArticleView />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/article" element={<ArticleView />} />
+                <Route path="/article/view" element={<ArticleFind />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
-export default Article;
+export default ArticlePage;
 
-ReactDOM.createRoot(document.getElementById("app")).render(<Article />);
+ReactDOM.createRoot(document.getElementById("app")).render(<ArticlePage />);
