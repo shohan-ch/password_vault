@@ -12,7 +12,7 @@ export default () => {
 
     return (
         <>
-            <Link to="/article/view">Article View</Link>
+            <Link to="/article/view/120">Article View</Link>
             <h2>Article {count}</h2>
             <button onClick={() => setCount(count - 1)}>count</button>
         </>

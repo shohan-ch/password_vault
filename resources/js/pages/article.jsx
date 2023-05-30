@@ -8,11 +8,11 @@ const ArticlePage = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/article" element={<ArticleView />} />
-                <Route path="/article/view" element={<ArticleFind />} />
+                <Route path="/article/view/:id" element={<ArticleFind />} />
             </Routes>
         </BrowserRouter>
     );
 };
-export default ArticlePage;
+// export default ArticlePage;
 
 ReactDOM.createRoot(document.getElementById("app")).render(<ArticlePage />);
